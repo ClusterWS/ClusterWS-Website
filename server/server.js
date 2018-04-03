@@ -4,8 +4,7 @@ const { Nuxt, Builder } = require('nuxt')
 
 new ClusterWS({
   worker: Worker,
-  host: '127.0.0.1',
-  port: 3000
+  port: process.env.PORT || process.env.port || 3000
 })
 
 function Worker() {
