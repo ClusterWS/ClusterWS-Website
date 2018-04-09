@@ -4,6 +4,12 @@ html,body{
   height: 100%;
 }
 
+/* Shared-style-section */
+.app-padding{
+  padding-right: 25px;
+  padding-left: 25px;
+}
+
 /* Header-navbar section */
 .app-navbar{
   overflow: hidden;
@@ -20,9 +26,15 @@ html,body{
   display: block;
   color: #ffffff;
   text-align: center;
-  padding: 16px;
+  padding: 10px;
   text-decoration: none;
   font-size: 18px;
+}
+
+.logo-white{
+  width: 40px;
+  height: 40px;
+  margin-top: 5px;
 }
 
 /* Heading section */
@@ -38,11 +50,12 @@ html,body{
   font-size: 100px;
   font-weight: lighter;
   width: 100%;
+  padding-left: 20px;
 }
 
-/* Features & Get-Started */
-.alignselfcenter{
-  width:100%;
+.main-logo{
+  height: 700px;
+  width: 700px;
 }
 
 /* Features section */
