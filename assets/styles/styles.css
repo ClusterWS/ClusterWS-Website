@@ -45,12 +45,18 @@ html,body{
 }
 
 .app-heading-background h1{
-  font-family: Segoe UI;
   color: #FFFFFF;
   font-size: 100px;
   font-weight: lighter;
   width: 100%;
   padding-left: 20px;
+}
+
+.app-heading-background p{
+  color: #E4E4E4;
+  font-size: 30px;
+  padding-left: 20px;
+  padding-top: 30px;
 }
 
 .main-logo{
