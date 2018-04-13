@@ -6,8 +6,8 @@ html,body{
 
 /* Shared-style-section */
 .app-padding{
-  padding-right: 25px;
-  padding-left: 25px;
+  padding-right: 30px;
+  padding-left: 30px;
 }
 
 /* Header-navbar section */
@@ -53,18 +53,20 @@ html,body{
 
 .app-heading-background p{
   color: #E4E4E4;
-  font-size: 30px;
+  font-size: 28px;
   padding-top: 30px;
   font-weight:lighter;
+  padding-bottom: 30px;
 }
 
 .button-get-started{
   background-color: #CB5151;
   border: none;
-  font-size: 35px;
+  font-size: 30px;
   color: #FFFFFF;
   font-weight: lighter;
-  width: 300px;
+  width: 320px;
+  height: 60px;
   text-decoration: none;
   border-radius: 40px;
 }
@@ -78,16 +80,19 @@ html,body{
   background-color: transparent;
   border-width: 2px;
   border-color: #CB5151;
-  font-size: 35px;
-  color: #FFFFFF;
-  font-weight: lighter;
-  width: 200px;
+  width: 154px;
+  height: 60px;
   text-decoration: none;
   border-radius: 40px;
 }
 
 .button-github:hover{
   border-color:#E24848;
+}
+
+.github-logo-white{
+  width: 44px;
+  height: 44px;
 }
 
 
