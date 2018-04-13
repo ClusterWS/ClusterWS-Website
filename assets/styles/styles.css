@@ -49,15 +49,47 @@ html,body{
   font-size: 100px;
   font-weight: lighter;
   width: 100%;
-  padding-left: 20px;
 }
 
 .app-heading-background p{
   color: #E4E4E4;
   font-size: 30px;
-  padding-left: 20px;
   padding-top: 30px;
+  font-weight:lighter;
 }
+
+.button-get-started{
+  background-color: #CB5151;
+  border: none;
+  font-size: 35px;
+  color: #FFFFFF;
+  font-weight: lighter;
+  width: 300px;
+  text-decoration: none;
+  border-radius: 40px;
+}
+
+.button-get-started:hover{
+  background:#E24848;
+}
+
+.button-github{
+  margin-left: 18px;
+  background-color: transparent;
+  border-width: 2px;
+  border-color: #CB5151;
+  font-size: 35px;
+  color: #FFFFFF;
+  font-weight: lighter;
+  width: 200px;
+  text-decoration: none;
+  border-radius: 40px;
+}
+
+.button-github:hover{
+  border-color:#E24848;
+}
+
 
 .main-logo{
   height: 700px;
