@@ -6,7 +6,7 @@ html,body{
 
 /* Shared-style-section */
 .app-padding{
-  padding-right: 30px;
+  padding-right: 40px;
   padding-left: 40px;
 }
 
@@ -26,12 +26,12 @@ html,body{
   display: block;
   color: #ffffff;
   text-align: center;
-  padding: 10px;
+  padding: 12px;
   text-decoration: none;
   font-size: 18px;
 }
 
-.logo-white{
+.navbar-logo{
   width: 40px;
   height: 40px;
   margin-top: 5px;
@@ -46,17 +46,17 @@ html,body{
 
 .app-heading-background h1{
   color: #FFFFFF;
-  font-size: 100px;
+  font-size: 110px;
   font-weight: lighter;
   width: 100%;
 }
 
 .app-heading-background p{
   color: #E4E4E4;
-  font-size: 28px;
-  padding-top: 30px;
+  font-size: 30px;
   font-weight:lighter;
-  padding-bottom: 40px;
+  padding-bottom: 120px;
+  padding-top: 60px;
 }
 
 .button-get-started{
@@ -96,9 +96,8 @@ html,body{
 }
 
 .main-logo{
-  height: 700px;
-  width: 700px;
-  float: right;
+  height: 650px;
+  width: 650px;
 }
 
 /* Features section */

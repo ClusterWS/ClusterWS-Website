@@ -1,0 +1,68 @@
+@media screen and (max-width: 1296px){
+  .main-logo{
+      width: 600px;
+      height: 600px;
+  }
+}
+
+@media screen and (max-width: 1251px){
+  .main-logo{
+      width: 550px;
+      height: 550px;
+  }
+}
+
+@media screen and (max-width: 1245px){
+  .app-heading-background h1{
+    font-size: 100px;
+  }
+
+  .app-heading-background p{
+    font-size: 25px;
+    padding-bottom: 80px;
+    padding-top: 60px;
+  } 
+}
+
+@media screen and (max-width: 1155px){
+  .main-logo{
+    width: 500px;
+    height: 500px;
+}
+  .app-heading-background h1{
+    font-size: 80px;
+  }
+
+  .app-heading-background p{
+    font-size: 23px;
+    padding-bottom: 60px;
+    padding-top: 40px;
+  } 
+
+  .button-get-started{
+    width: 280px;
+  }
+}
+
+@media screen and (max-width: 1069px){
+  .button-get-started{
+    width: 260px;
+  }
+}
+
+@media screen and (max-width: 1059px){
+  .main-logo{
+    width: 450px;
+    height: 450px;
+  }
+}
+
+@media screen and (max-width: 1030px){
+  .button-get-started{
+    width: 260px;
+  }
+
+  .button-github{
+    width: 134px;
+  }
+}
