@@ -54,26 +54,7 @@
     padding-top: 40px;
     text-align: center;
   }
-} 
-
-@media screen and (max-width: 992px){
-  .app-heading-background h1{
-    text-align: center;
-  }
-
-  .app-heading-background p{
-    text-align: center;
-  }
-
-  .button-get-started{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .button-github{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+  .app-button{
+    text-align: center !important;
   }
 }

@@ -59,6 +59,10 @@ html,body{
   padding-top: 50px;
 }
 
+.app-button{
+  padding-bottom: 20px
+}
+
 .button-get-started{
   background-color: #CB5151;
   border: none;
@@ -96,8 +100,8 @@ html,body{
 }
 
 .main-logo{
-  height: 650px;
-  width: 650px;
+  max-height: 650px;
+  max-width: 650px;
 }
 
 /* Features section */
