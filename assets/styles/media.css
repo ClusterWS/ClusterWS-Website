@@ -1,4 +1,4 @@
-@media screen and (max-width: 1296px){
+/* @media screen and (max-width: 1296px){
   .main-logo{
       width: 600px;
       height: 600px;
@@ -95,7 +95,7 @@
   }
 } 
 
-/* @media screen and (max-width: 992px){
+@media screen and (max-width: 992px){
   .main-logo{
     width: 450px;
     height: 450px;
