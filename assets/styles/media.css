@@ -66,3 +66,61 @@
     width: 134px;
   }
 }
+
+@media screen and (max-width: 991px){
+  .main-logo{
+    width: 650px;
+    height: 650px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .app-heading-background h1{
+    font-size: 110px;
+    text-align: center;
+  }
+
+  .app-heading-background p{
+    font-size: 30px;
+    padding-bottom: 60px;
+    padding-top: 40px;
+    text-align: center;
+  }
+  
+  .btn{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+} 
+
+/* @media screen and (max-width: 992px){
+  .main-logo{
+    width: 450px;
+    height: 450px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .app-heading-background h1{
+    text-align: center;
+  }
+
+  .app-heading-background p{
+    text-align: center;
+  }
+
+  .button-get-started{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .button-github{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+} */
