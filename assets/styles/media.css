@@ -1,60 +1,172 @@
-@media screen and (max-width: 1245px){
-  .app-heading-background h1{
+@media screen and (max-width: 1245px) {
+  .app-heading-background h1 {
     font-size: 100px;
   }
-
-  .app-heading-background p{
+  .app-heading-background p {
     font-size: 25px;
     padding-bottom: 80px;
     padding-top: 60px;
-  } 
+  }
 }
 
-@media screen and (max-width: 1155px){
-  .app-heading-background h1{
+@media screen and (max-width: 1155px) {
+  .app-heading-background h1 {
     font-size: 80px;
   }
-
-  .app-heading-background p{
+  .app-heading-background p {
     font-size: 23px;
     padding-bottom: 60px;
     padding-top: 40px;
-  } 
-
-  .button-get-started{
+  }
+  .button-get-started {
     width: 280px;
   }
 }
 
-@media screen and (max-width: 1069px){
-  .button-get-started{
+@media screen and (max-width: 1069px) {
+  .button-get-started {
     width: 260px;
   }
 }
 
-@media screen and (max-width: 1030px){
-  .button-get-started{
+@media screen and (max-width: 1030px) {
+  .button-get-started {
     width: 260px;
   }
-
-  .button-github{
+  .button-github {
     width: 134px;
   }
 }
 
-@media screen and (max-width: 991px){
-  .app-heading-background h1{
+@media screen and (max-width: 991px) {
+  .app-heading-background h1 {
     font-size: 110px;
     text-align: center;
   }
-
-  .app-heading-background p{
+  .app-heading-background p {
     font-size: 30px;
-    padding-bottom: 60px;
-    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-top: 20px;
     text-align: center;
   }
-  .app-button{
+  .app-button {
     text-align: center !important;
+    padding-bottom: 50px;
+  }
+  .main-logo {
+    padding-top: 70px;
+    padding-bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .app-heading-background h1 {
+    font-size: 90px;
+  }
+  .app-heading-background p {
+    font-size: 25px;
+    padding-bottom: 30px;
+    padding-top: 10px;
+  }
+  .button-get-started {
+    width: 230px;
+    font-size: 20px;
+    height: 50px;
+  }
+  .button-github {
+    width: 104px;
+    height: 50px;
+    margin-left: 12px;
+  }
+  .github-logo-white {
+    width: 34px;
+    height: 34px;
+  }
+  .main-logo {
+    padding-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 510px) {
+  .app-heading-background h1 {
+    font-size: 68px;
+  }
+  .app-heading-background p {
+    font-size: 20px;
+    padding-bottom: 20px;
+  }
+  .button-get-started {
+    width: 200px;
+    font-size: 20px;
+  }
+  .button-github {
+    width: 74px;
+    margin-left: 9px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .app-heading-background h1 {
+    font-size: 50px;
+  }
+  .app-heading-background p {
+    padding-top: 5px;
+    padding-bottom: 10px;
+  }
+  .button-get-started {
+    width: 160px;
+  }
+  .button-github {
+    width: 70px;
+    margin-left: 9px;
+  }
+  .main-logo {
+    padding-bottom: 0px;
+  }
+  .github-logo-white {
+    width: 30px;
+    height: 30px;
+  }
+  .app-button {
+    padding-bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  .button-get-started {
+    width: 110px;
+    font-size: 18px;
+  }
+  .button-github {
+    margin-left: 6px;
+  }
+}
+
+@media screen and (max-width: 335px) {
+  .app-heading-background h1 {
+    font-size: 45px;
+  }
+  .app-heading-background p {
+    font-size: 18px;
+    padding-top: 0px;
+    padding-bottom: 5px;
+  }
+  .button-get-started {
+    width: 110px;
+    font-size: 18px;
+  }
+  .button-github {
+    width: 60px;
+    margin-left: 3px;
+  }
+  .main-logo {
+    padding-bottom: 0px;
+  }
+  .github-logo-white {
+    width: 30px;
+    height: 30px;
+  }
+  .app-button {
+    padding-bottom: 20px;
   }
 }
