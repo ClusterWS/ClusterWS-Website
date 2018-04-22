@@ -1,19 +1,21 @@
-html,body{
+html, body {
   margin: 0;
   padding: 0;
   height: 100%;
 }
 
 /* Shared-style-section */
-.app-padding{
+
+.app-padding {
   padding-right: 40px;
   padding-left: 40px;
 }
 
 /* Header-navbar section */
-.app-navbar{
+
+.app-navbar {
   overflow: hidden;
-  background-color:rgba(0, 0, 0, 0.30);
+  background-color: rgba(0, 0, 0, 0.30);
   position: fixed;
   top: 0;
   width: 100%;
@@ -21,7 +23,7 @@ html,body{
   z-index: 10;
 }
 
-.app-navbar a{
+.app-navbar a {
   float: right;
   display: block;
   color: #ffffff;
@@ -32,37 +34,36 @@ html,body{
   font-family: 'Raleway', sans-serif;
 }
 
-.navbar-logo{
+.navbar-logo {
   width: 40px;
   height: 40px;
   margin-top: 6px;
 }
 
 /* Heading section */
-.app-heading-background{
-  background:
-  linear-gradient(#DB1B7B,#4C238B);
+
+.app-heading-background {
+  background: linear-gradient(#DB1B7B, #4C238B);
   min-height: 100%;
 }
 
-.app-heading-background h1{
+.app-heading-background h1 {
   color: #FFFFFF;
   font-size: 110px;
   font-weight: lighter;
-  width: 100%;
   font-family: 'Poiret One', cursive;
 }
 
-.app-heading-background p{
+.app-heading-background p {
   color: #E4E4E4;
   font-size: 30px;
-  font-weight:lighter;
+  font-weight: lighter;
   padding-bottom: 100px;
   padding-top: 50px;
   font-family: 'Raleway', sans-serif;
 }
 
-.button-get-started{
+.button-get-started {
   background-color: #CB5151;
   border: none;
   font-size: 30px;
@@ -75,11 +76,11 @@ html,body{
   border-radius: 40px;
 }
 
-.button-get-started:hover{
-  background:#E24848;
+.button-get-started:hover {
+  background: #E24848;
 }
 
-.button-github{
+.button-github {
   margin-left: 18px;
   background-color: transparent;
   border-width: 2px;
@@ -90,22 +91,23 @@ html,body{
   border-radius: 40px;
 }
 
-.button-github:hover{
-  border-color:#E24848;
+.button-github:hover {
+  border-color: #E24848;
 }
 
-.github-logo-white{
+.github-logo-white {
   width: 44px;
   height: 44px;
 }
 
-.main-logo{
+.main-logo {
   max-height: 650px;
   max-width: 650px;
 }
 
 /* Features section */
-.app-features-background{
+
+.app-features-background {
   background-color: #ffffff;
   min-height: 100%;
   background-position: center;
@@ -113,15 +115,16 @@ html,body{
   background-size: cover;
 }
 
-.app-features-background h2{
+.app-features-background h2 {
   font-size: 50px;
   color: #363636;
   text-align: center;
-  width:100%;
+  width: 100%;
 }
 
 /* Get-Started section */
-.app-getstarted-background{
+
+.app-getstarted-background {
   background-color: #363636;
   min-height: 100%;
   background-position: center;
@@ -129,9 +132,9 @@ html,body{
   background-size: cover;
 }
 
-.app-getstarted-background h2{
+.app-getstarted-background h2 {
   font-size: 50px;
   color: #CACACA;
   text-align: center;
-  width:100%;
+  width: 100%;
 }
