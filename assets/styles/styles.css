@@ -29,12 +29,13 @@ html,body{
   padding: 12px;
   text-decoration: none;
   font-size: 18px;
+  font-family: 'Raleway', sans-serif;
 }
 
 .navbar-logo{
   width: 40px;
   height: 40px;
-  margin-top: 5px;
+  margin-top: 6px;
 }
 
 /* Heading section */
@@ -49,6 +50,7 @@ html,body{
   font-size: 110px;
   font-weight: lighter;
   width: 100%;
+  font-family: 'Poiret One', cursive;
 }
 
 .app-heading-background p{
@@ -57,12 +59,14 @@ html,body{
   font-weight:lighter;
   padding-bottom: 100px;
   padding-top: 50px;
+  font-family: 'Raleway', sans-serif;
 }
 
 .button-get-started{
   background-color: #CB5151;
   border: none;
   font-size: 30px;
+  font-family: 'Poiret One', cursive;
   color: #FFFFFF;
   font-weight: lighter;
   width: 320px;
