@@ -38,7 +38,7 @@
   }
 }
 
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 992px) {
   .app-heading-background h1 {
     font-size: 110px;
     text-align: center;
@@ -85,6 +85,18 @@
   .main-logo {
     padding-bottom: 20px;
   }
+  .app-features-background h2{
+    font-size: 90px;
+  }
+  .app-features-background h3{
+    font-size: 50px;
+  }
+  .app-features-background p{
+    font-size: 25px;
+  }
+  .app-getstarted-background h2{
+    font-size: 90px;
+  }
 }
 
 @media screen and (max-width: 510px) {
@@ -102,6 +114,18 @@
   .button-github {
     width: 74px;
     margin-left: 9px;
+  }
+  .app-features-background h2{
+    font-size: 68px;
+  }
+  .app-features-background h3{
+    font-size: 40px;
+  }
+  .app-features-background p{
+    font-size: 20px;
+  }
+  .app-getstarted-background h2{
+    font-size: 68px;
   }
 }
 
@@ -129,6 +153,15 @@
   }
   .app-button {
     padding-bottom: 30px;
+  }
+  .app-features-background h2{
+    font-size: 50px;
+  }
+  .app-features-background h3{
+    font-size: 30px;
+  }
+  .app-getstarted-background h2{
+    font-size: 50px;
   }
 }
 
@@ -168,5 +201,17 @@
   }
   .app-button {
     padding-bottom: 20px;
+  }
+  .app-features-background h2{
+    font-size: 45px;
+  }
+  .app-features-background h3{
+    font-size: 25px;
+  }
+  .app-features-background p{
+    font-size: 18px;
+  }
+  .app-getstarted-background h2{
+    font-size: 45px;
   }
 }

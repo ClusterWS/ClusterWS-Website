@@ -116,10 +116,44 @@ html, body {
 }
 
 .app-features-background h2 {
-  font-size: 50px;
+  padding-top: 20px;
+  padding-bottom: 30px;
+  font-size: 100px;
   color: #363636;
   text-align: center;
   width: 100%;
+  font-family: 'Poiret One', cursive;
+}
+
+.app-features-imgs img{
+  width: 200px !important;
+  height: 200px !important;
+}
+
+.app-features-background p{
+  color: #8C8C8C;
+  font-size: 20px;
+  padding-top: 20px;
+  font-family: 'Raleway', sans-serif;
+}
+
+.app-features-background h3 {
+  padding-top: 10px;
+  padding-bottom: 20px;
+  font-size: 60px;
+  color: #6C6C6C;
+  text-align: center;
+  width: 100%;
+  font-family: 'Poiret One', cursive;
+}
+
+.app-languages{
+  padding-bottom:40px;
+}
+
+.app-languages img{
+  width: 100px;
+  height: 100px;
 }
 
 /* Get-Started section */
@@ -133,8 +167,10 @@ html, body {
 }
 
 .app-getstarted-background h2 {
-  font-size: 50px;
+  padding-top: 20px;
+  font-size: 100px;
   color: #CACACA;
   text-align: center;
   width: 100%;
+  font-family: 'Poiret One', cursive;
 }
