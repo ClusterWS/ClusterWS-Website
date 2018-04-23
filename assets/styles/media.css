@@ -57,6 +57,9 @@
     padding-top: 70px;
     padding-bottom: 30px;
   }
+  .app-languages img{
+    float: none !important;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -88,11 +91,15 @@
   .app-features-background h2{
     font-size: 90px;
   }
+  .app-features-background p{
+    font-size: 25px;
+  }
   .app-features-background h3{
     font-size: 50px;
   }
-  .app-features-background p{
-    font-size: 25px;
+  .app-languages img{
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
   .app-getstarted-background h2{
     font-size: 90px;
