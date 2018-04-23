@@ -234,3 +234,9 @@
     margin-top: 100px;
   }
 }
+
+@media screen and (min-height: 1300px){
+  .app-sdks{
+    margin-top: 150px;
+  }
+}
