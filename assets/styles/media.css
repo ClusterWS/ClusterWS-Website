@@ -222,3 +222,15 @@
     font-size: 45px;
   }
 }
+
+@media screen and (min-height: 800px){
+  .app-sdks{
+    margin-top: 50px;
+  }
+}
+
+@media screen and (min-height: 1000px){
+  .app-sdks{
+    margin-top: 100px;
+  }
+}
