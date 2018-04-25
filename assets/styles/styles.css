@@ -174,3 +174,49 @@ html, body {
   width: 100%;
   font-family: 'Poiret One', cursive;
 }
+
+.app-getstarted-background p{
+  font-size: 30px;
+  color: #A8A8A8;
+  font-family: 'Raleway', sans-serif;
+  padding-bottom: 10px;
+}
+
+.button-get-started2 {
+  background-color: #4CCFAC;
+  border: none;
+  font-size: 30px;
+  font-family: 'Poiret One', cursive;
+  color: #FFFFFF;
+  font-weight: lighter;
+  width: 320px;
+  height: 60px;
+  text-decoration: none;
+  border-radius: 40px;
+}
+
+.button-get-started-2{
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+/* Footer section */
+.app-footer-background{
+  background-color: #E1E1E1;
+}
+
+.app-footer-background p{
+  color:#6C6C6C;
+  font-size: 20px;
+}
+
+.app-footer-background img{
+  width: 40px;
+  height: 40px;
+  padding-bottom: 10px;
+}
+
+.footer-padding{
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
