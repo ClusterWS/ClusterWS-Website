@@ -11,6 +11,13 @@ html, body {
   padding-left: 40px;
 }
 
+.disable-select {
+  -webkit-user-select: none;  
+  -moz-user-select: none;    
+  -ms-user-select: none;      
+  user-select: none;
+}
+
 /* Header-navbar section */
 
 .app-navbar {
