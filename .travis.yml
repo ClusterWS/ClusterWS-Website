@@ -14,7 +14,7 @@ addons:
         packages:
             - g++-4.8
 install:
-    - npm install -g vuepress
+    - npm install
 script:
     - npm run docs:build
 cache:
@@ -22,13 +22,15 @@ cache:
         - "node_modules"
 notifications:
     email: false
-deploy:
-    repo: ClusterWS/clusterws.github.io
-    provider: pages
-    local_dir: docs/.vuepress/dist
-    skip-cleanup: true
-    github-token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
-    keep-history: true
-    target-branch: master
-    on:
-        branch: master
+after_success:
+  - ./deploy.sh
+# deploy:
+#     repo: ClusterWS/clusterws.github.io
+#     provider: pages
+#     local_dir: docs/.vuepress/dist
+#     skip-cleanup: true
+#     github-token: $GITHUB_TOKEN
+#     keep-history: true
+#     target-branch: master
+#     on:
+#         branch: master
