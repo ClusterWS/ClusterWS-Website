@@ -23,11 +23,11 @@ notifications:
     email: false
 deploy:
     provider: pages
-    skip-cleanup: true
     local_dir: docs/.vuepress/dist
+    skip-cleanup: true
     github-token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
     repo: ClusterWS/clusterws.github.io
     keep-history: true
-    target-branch: master
+    target-branch: website
     on:
         branch: master
