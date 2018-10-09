@@ -2,6 +2,9 @@ module.exports = {
   title: "ClusterWS",
   description: "Need fix",
   themeConfig: {
+    nav: [
+      { text: 'GitHub', link: 'https://github.com/ClusterWS/ClusterWS' }
+    ],
     sidebar: [
       {
         title: 'Home',
@@ -17,9 +20,9 @@ module.exports = {
         title: 'Clients Docs',
         collapsable: false,
         children: [
-          ['/clients/javascript', 'JavaScript'],
-          ['/clients/java', 'Java'],
-          ['/clients/swift', 'Swift'],
+          ['/clients/JS', 'JavaScript'],
+          ['/clients/JAVA', 'Java'],
+          ['/clients/SWIFT', 'Swift'],
         ]
       }
     ]
