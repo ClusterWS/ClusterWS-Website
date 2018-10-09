@@ -1,6 +1,4 @@
----
-sidebar: false
----
+
 # ClusterWS
 Build Scalable Node.js WebSockets Applications
 
