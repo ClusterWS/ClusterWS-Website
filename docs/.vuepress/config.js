@@ -1,6 +1,6 @@
 module.exports = {
   title: "ClusterWS",
-  description: "Need fix",
+  description: "Lightweight, fast and powerful framework for building scalable WebSocket applications in Node.js",
   themeConfig: {
     nav: [
       { text: 'GitHub', link: 'https://github.com/ClusterWS/ClusterWS' }
