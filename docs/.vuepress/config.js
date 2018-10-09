@@ -6,15 +6,13 @@ module.exports = {
       { text: 'GitHub', link: 'https://github.com/ClusterWS/ClusterWS' }
     ],
     sidebar: [
-      {
-        title: 'Home',
-        collapsable: false,
-        // children: '/'
-      },
+      ["/guide/", "Home"],
       {
         title: 'Server Docs',
         collapsable: false,
-        children: [['/server/BASIC', 'Basic']]
+        children: [
+          ['/server/BASIC', 'Basic']
+        ]
       },
       {
         title: 'Clients Docs',
@@ -26,12 +24,5 @@ module.exports = {
         ]
       }
     ]
-    // sidebar: [
-    //   '/',
-    //   ['/clients/java', 'Java Client'],
-    //   '/clients/javascript',
-    //   '/clients/swift'
-    //   // ['/clients', 'Explicit link text']
-    // ]
   }
 };
