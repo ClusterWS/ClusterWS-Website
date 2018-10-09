@@ -1,1 +1,4 @@
-module.exports = {};
+module.exports = {
+  title: "ClusterWS",
+  description: "Need fix"
+};
