@@ -2,6 +2,7 @@ language: node_js
 branches:
   only:
     - website
+    - master
 node_js:
     - "10"
 env:
@@ -22,12 +23,12 @@ cache:
 notifications:
     email: false
 deploy:
+    repo: ClusterWS/clusterws.github.io
     provider: pages
     local_dir: docs/.vuepress/dist
     skip-cleanup: true
     github-token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
-    repo: ClusterWS/clusterws.github.io
     keep-history: true
-    target-branch: website
+    target-branch: master
     on:
         branch: master
