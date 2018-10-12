@@ -2,7 +2,12 @@ module.exports = {
   title: "ClusterWS",
   description: "Lightweight, fast and powerful framework for building scalable WebSocket applications in Node.js",
   ga: "UA-127398674-1",
+  sitemap: {
+    filename: 'sitemap.txt',
+    domain: 'https://clusterws.github.io/'
+  },
   themeConfig: {
+    search: false,
     nav: [
       { text: 'GitHub', link: 'https://github.com/ClusterWS/ClusterWS' }
     ],
@@ -10,18 +15,18 @@ module.exports = {
       ["/guide/", "Home"],
       {
         title: 'Server Docs',
-        collapsable: false,
+        collapsable: true,
         children: [
-          ['/server/BASIC', 'Basic']
+          ['/server/Basic', 'Basic']
         ]
       },
       {
         title: 'Clients Docs',
-        collapsable: false,
+        collapsable: true,
         children: [
-          ['/clients/JS', 'JavaScript'],
-          ['/clients/JAVA', 'Java'],
-          ['/clients/SWIFT', 'Swift'],
+          ['/clients/Java', 'Java'],
+          ['/clients/Swift', 'Swift'],
+          ['/clients/JavaScript', 'JavaScript'],
         ]
       }
     ]
