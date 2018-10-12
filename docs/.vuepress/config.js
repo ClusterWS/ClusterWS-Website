@@ -14,14 +14,14 @@ module.exports = {
     sidebar: [
       ["/guide/", "Home"],
       {
-        title: 'Server Docs',
+        title: 'Server',
         collapsable: true,
         children: [
           ['/server/Basic', 'Basic']
         ]
       },
       {
-        title: 'Clients Docs',
+        title: 'Clients',
         collapsable: true,
         children: [
           ['/clients/Java', 'Java'],
