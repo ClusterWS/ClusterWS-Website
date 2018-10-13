@@ -5,7 +5,7 @@ actionText: Get Started →
 actionLink: /guide/
 features:
   - title: Minimal
-    details: ClusterWSs is minimal framework with low overhead server code is under 30kb (not min and gzip), client libraries are written to be very small end efficient 
+    details: ClusterWS is minimal framework with low overhead server code is under 30kb (not min and gzip), client libraries are written to be very small end efficient 
   - title: Scalable
     details: Simple configuration system allows to scale your WebSocket application across multiple cpus and machines with minor changes
   - title: Performant 
