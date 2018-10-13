@@ -7,26 +7,25 @@ module.exports = {
     domain: 'https://clusterws.github.io/'
   },
   themeConfig: {
-    search: false,
     nav: [
       { text: 'GitHub', link: 'https://github.com/ClusterWS/ClusterWS' }
     ],
     sidebar: [
-      ["/guide/", "Home"],
+      "/guide/",
       {
         title: 'Server',
         collapsable: true,
         children: [
-          ['/server/Basic', 'Basic']
+          ['/guide/server/Basic', 'Basic']
         ]
       },
       {
         title: 'Clients',
         collapsable: true,
         children: [
-          ['/clients/Java', 'Java'],
-          ['/clients/Swift', 'Swift'],
-          ['/clients/JavaScript', 'JavaScript'],
+          '/guide/clients/Java',
+          '/guide/clients/Swift',
+          '/guide/clients/JavaScript'
         ]
       }
     ]
