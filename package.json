@@ -1,9 +1,11 @@
 {
   "scripts": {
     "start": "vuepress dev docs",
-    "docs:build": "vuepress build docs"
+    "docs:build": "vuepress build docs",
+    "postdocs:build": "vuepress-sitemap -h https://clusterws.github.io/ -d docs/.vuepress/dist"
   },
   "dependencies": {
-    "vuepress": "^0.14.4"
+    "vuepress": "^0.14.4",
+    "vuepress-plugin-sitemap": "0.0.1"
   }
 }
