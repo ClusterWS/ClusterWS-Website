@@ -13,7 +13,8 @@ module.exports = {
         title: 'Server',
         collapsable: true,
         children: [
-          ['/guide/server/Basic', 'Basic']
+          '/guide/server/Configurations',
+          '/guide/server/Middleware'
         ]
       },
       {
@@ -23,6 +24,15 @@ module.exports = {
           '/guide/clients/Java',
           '/guide/clients/Swift',
           '/guide/clients/JavaScript'
+        ]
+      },
+      {
+        title: 'Examples',
+        collapsable: true,
+        children: [
+          '/guide/examples/Basic',
+          '/guide/examples/REST',
+
         ]
       },
       '/guide/internals/Internals'
