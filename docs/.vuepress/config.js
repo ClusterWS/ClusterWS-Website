@@ -24,7 +24,8 @@ module.exports = {
           '/guide/clients/Swift',
           '/guide/clients/JavaScript'
         ]
-      }
+      },
+      '/guide/internals/Internals'
     ]
   }
 };
