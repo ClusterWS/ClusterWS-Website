@@ -5,10 +5,10 @@ actionText: Get Started →
 actionLink: /guide/
 features:
   - title: Minimal
-    details: ClusterWS is minimal framework with low overhead server code is under 30kb (not min and gzip), client libraries are written to be very small end efficient 
+    details: ClusterWS is small server framework with rage of different client libraries for different languages
   - title: Scalable
-    details: Simple configuration system allows to scale your WebSocket application across multiple cpus and machines with minor changes
+    details: Simple configuration system allows to scale your WebSocket application across multiple CPUs and Machines with very minor changes
   - title: Performant 
-    details: ClusterWS is based on uWebSockets which is one of the fastest WebSocket libraries
+    details: ClusterWS server utilizes CWS (fork of uWebSockets) c++ Node.js bindings for websocket communication
 footer: MIT Licensed | Copyright © 2018 ClusterWS
 ---
