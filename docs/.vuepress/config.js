@@ -13,8 +13,7 @@ module.exports = {
         title: 'Server',
         collapsable: true,
         children: [
-          '/guide/server/Configurations',
-          '/guide/server/Middleware'
+          '/guide/server/Guide'
         ]
       },
       {
