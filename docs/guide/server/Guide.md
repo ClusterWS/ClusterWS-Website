@@ -1,6 +1,5 @@
 ---
 sidebarDepth: 2
-collapsable: true
 ---
 
 # Guide
@@ -26,7 +25,7 @@ new ClusterWS({
 ```
 
 ### worker (required)
-This is your actual worker function which will be scaled across all processes, all your many logic should go in there:
+This is your actual worker function which will be scaled across all processes, all your main logic will go in there:
 
 ```js
 const { ClusterWS, Mode } = require('@clusterws/server');
