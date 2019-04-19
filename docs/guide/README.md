@@ -19,7 +19,7 @@ ClusterWS official supports client libraries for:
 
 
 
-### Simple to Scale
+<!-- ### Simple to Scale
 To scale between different Processes and Machine ClusteWS uses [Node.js Cluster Module](https://nodejs.org/api/cluster.html) and to 
 communicate between different them it utilizes custom brokers/scaler processes which efficiently distribute messages
 between all processes and Machines. 
@@ -36,11 +36,11 @@ new ClusterWS({
 // for more options read server documentation
 ```
 <!-- Add some description about pubsub -->
+ -->
 
-
-### WebSocket
+<!-- ### WebSocket
 For WebSocket library ClusterWS uses [CWS](https://github.com/ClusterWS/cWS) (fork of uWebSocket C++ WebSockets library) which gives better 
 performance then Node.js WebSocket alternatives.
-
+ -->
 
 # This website is for version 4.0.0 which is not yet available

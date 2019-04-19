@@ -1,8 +1,7 @@
 ---
 sidebarDepth: 2
 ---
-
-# Guide
+# Server
 
 ## Installation
 
@@ -87,7 +86,6 @@ new ClusterWS({
 });
 ```
 
-
 ### websocketOptions (optional)
 * Type: Object
 
@@ -125,7 +123,6 @@ new ClusterWS({
     sendConfigurationMessage: false
   }
 });
-
 ```
 
 
@@ -137,7 +134,7 @@ new ClusterWS({
 
 
 <!-- This will disappear -->
-## Example
+## Examples
 
 Create very simple single instance server:
 

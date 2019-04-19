@@ -8,33 +8,8 @@ module.exports = {
       { text: 'GitHub', link: 'https://github.com/ClusterWS/ClusterWS' }
     ],
     sidebar: [
-      "/guide/",
-      {
-        title: 'Server',
-        collapsable: true,
-        children: [
-          '/guide/server/'
-        ]
-      },
-      {
-        title: 'Clients',
-        collapsable: true,
-        children: [
-          '/guide/clients/Java',
-          '/guide/clients/Swift',
-          '/guide/clients/JavaScript'
-        ]
-      },
-      {
-        title: 'Examples',
-        collapsable: true,
-        children: [
-          '/guide/examples/Basic',
-          '/guide/examples/REST',
-
-        ]
-      },
-      '/guide/internals/Internals'
+      '/guide/',
+      '/guide/server/'
     ]
   }
 };
