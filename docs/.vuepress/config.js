@@ -13,7 +13,7 @@ module.exports = {
         title: 'Server',
         collapsable: true,
         children: [
-          '/guide/server/Guide'
+          '/guide/server/'
         ]
       },
       {
