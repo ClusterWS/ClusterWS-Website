@@ -8,8 +8,14 @@ sidebarDepth: 2
 Simply run below command to install **ClusterWS** server package in to your Node.js project:
 
 ```js
-npm i @clusterws/server
+// Current version is alpha 3
+
+npm i @clusterws/server@4.0.0-alpha.3
+
+// Below installation will not work correctly as new version has not been released yet
+// npm i @clusterws/server
 ```
+
 
 ## Server Configurations
 To configure your ClusterWS server in different ways you can use below option.
@@ -125,6 +131,50 @@ new ClusterWS({
 });
 ```
 
+### loggerOptions (optional)
+* Type: object
+
+#### logger (optional)
+* Type: object
+* Default: internal logger
+
+#### logLevel (optional)
+* Type: enum
+* Available: `LogLevel.ALL`, `LogLevel.DEBUG`, `LogLevel.INFO`, `LogLevel.WARN`, `LogLevel.ERROR`
+* Default: `LogLevel.INFO`
+
+Logger Options allow you to pass your custom logger (any should fit like Winston, Pino, etc) or to specify log level in internal logger.
+Internal ClusterWS logger is very basic logger without any transport and any cool features. If you really need proper logging replace internal one with
+(Winston, Pino, or any other which should fit)
+
+```js
+const { ClusterWS, LogLevel } = require('@clusterws/server');
+
+new ClusterWS({
+  worker: ...,
+  loggerOptions: {
+    // This will set default log level to debug,
+    // note that if you provide custom logger you should set
+    // log level inside of that custom logger
+    // below option is used only for internal ClusterWS logger
+    logLevel: LogLevel.DEBUG
+  }
+});
+
+
+// Example of custom logger usage
+const logger = require('pino')()
+const { ClusterWS } = require('@clusterws/server');
+
+new ClusterWS({
+  worker: ...,
+  loggerOptions: {
+    // This will setup default logger to Pino
+    logger: logger
+  }
+});
+
+```
 
 
 
@@ -134,7 +184,7 @@ new ClusterWS({
 
 
 <!-- This will disappear -->
-## Examples
+<!-- ## Examples
 
 Create very simple single instance server:
 
@@ -157,6 +207,6 @@ function Worker() {
   })
 }
 
-```
+``` -->
 
 
