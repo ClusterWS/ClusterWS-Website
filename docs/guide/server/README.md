@@ -10,16 +10,15 @@ Simply run below command to install **ClusterWS** server package in to your Node
 ```js
 // Current version is alpha 3
 
-npm i @clusterws/server@4.0.0-alpha.3
+npm i @clusterws/server@4.0.0-alpha.4
 
-// Below installation will not work correctly as new version has not been released yet
+// Below installation will not work correctly 
+// as new version has not been released yet
 // npm i @clusterws/server
 ```
 
-
 ## Server Configurations
-To configure your ClusterWS server in different ways you can use below option.
-
+ClusterWS provides simple way to configure and scale your application. 
 
 ### worker (required)
 * Type: function
@@ -95,22 +94,11 @@ new ClusterWS({
 ### websocketOptions (optional)
 * Type: Object
 
-#### wsPath (optional)
-* Type: string
-* Default: null
-
-#### autoPing (optional)
-* Type: boolean
-* Default: true
-
-#### pingInterval (optional)
-* Type: number
-* Default: 20000 (in ms)
-
-#### sendConfigurationMessage (optional)
-* Type: boolean
-* Default: true
-
+Parameters:
+* `wsPath`: (optional, string, default `null`)
+* `autoPing`: (optional, boolean, default `true`),
+* `pingInterval`: (optional, number, default `20000`),
+* `sendConfigurationMessage`: (optional, boolean, default `true`)
 
 This option is object which is responsible for websocket configurations allows to specify on which path will websocket be accepted enable or disable ping pong, how often send ping and if on connect send configurations to the client.
 
@@ -134,14 +122,9 @@ new ClusterWS({
 ### loggerOptions (optional)
 * Type: object
 
-#### logger (optional)
-* Type: object
-* Default: internal logger
-
-#### logLevel (optional)
-* Type: enum
-* Available: `LogLevel.ALL`, `LogLevel.DEBUG`, `LogLevel.INFO`, `LogLevel.WARN`, `LogLevel.ERROR`
-* Default: `LogLevel.INFO`
+Parameters:
+* `logger`: (optional, object, default `Logger`),
+* `logLevel`: (optional, enum, default `LogLevel.INFO`, available: `LogLevel.ALL`, `LogLevel.DEBUG`, `LogLevel.INFO`, `LogLevel.WARN`, `LogLevel.ERROR`),
 
 Logger Options allow you to pass your custom logger (any should fit like Winston, Pino, etc) or to specify log level in internal logger.
 Internal ClusterWS logger is very basic logger without any transport and any cool features. If you really need proper logging replace internal one with
@@ -173,8 +156,50 @@ new ClusterWS({
     logger: logger
   }
 });
-
 ```
+
+### tlsOptions (optional)
+* Type: SecureContextOptions (from node.js `tls`)
+
+Parameters:
+* `key`: (optional, string, default `null`)
+* `cert`: (optional, string, default `null`),
+* `ca`: (optional, string, default `null`),
+* `pfx`: (optional, string, default `null`)
+* `passphrase`: (optional, string, default `null`)
+
+This options enables `https` and `wss` for your server. 
+
+**Note:** better way to handle `https` and `wss` would be by setting up proxy server such as Nginx in front of you Node application.
+
+```js
+const { ClusterWS } = require('@clusterws/server');
+
+new ClusterWS({
+  worker: ...,
+  // Your application should be accessible from https and wss now
+  tlsOptions: {
+    key: fs.readFileSync('./path-to-your-ssl/server-key.pem'),
+    cert: fs.readFileSync('./path-to-your-ssl/server-cert.pem'),
+  }
+});
+```
+
+### scaleOptions (optional)
+
+TODO: Write docs for scale options
+
+## Socket
+Socket section
+
+## Pub/Sub
+Pub/Sub section
+
+## Middleware
+Middleware section
+
+
+
 
 
 

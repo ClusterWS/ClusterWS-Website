@@ -9,7 +9,8 @@ module.exports = {
     ],
     sidebar: [
       '/guide/',
-      '/guide/server/'
+      '/guide/server/',
+      '/guide/clients/JavaScript.md'
     ]
   }
 };

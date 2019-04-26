@@ -1,4 +1,4 @@
-# JavaScript
+# JavaScript Client
 
 ## Introduction
 Hello
