@@ -95,6 +95,7 @@ new ClusterWS({
 * Type: Object
 
 Parameters:
+* `engine`: (optional, string, default `@clusterws/ws`)
 * `wsPath`: (optional, string, default `null`)
 * `autoPing`: (optional, boolean, default `true`),
 * `pingInterval`: (optional, number, default `20000`),
@@ -108,11 +109,18 @@ const { ClusterWS } = require('@clusterws/server');
 new ClusterWS({
   worker: ...,
   websocketOptions: {
+
+    // currently engine allows only `@clusterws/cws` (fork of uws) or `ws` (node js WebSocket library) 
+    // if you are selecting `ws` you have to install it before using with `npm install ws` command. 
+    engine: 'ws'
+
     // will accept websocket only when they connect to ws://url:port/hello
     wsPath: '/hello', 
     autoPing: true,
+
     // will send ping every 10s
     pingInterval: 10000,
+
     // will not send configuration message to the client on new connection
     sendConfigurationMessage: false
   }
