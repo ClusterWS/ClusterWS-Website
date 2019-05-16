@@ -4,11 +4,11 @@ heroImage: https://cdn.rawgit.com/goriunov/159120ca6a883d8d4e75543ec395d361/raw/
 actionText: Get Started →
 actionLink: /guide/
 features:
-  - title: Minimal
-    details: ClusterWS is small Node.js server framework with the range of different client libraries for different languages
-  - title: Scalable
-    details: Simple configuration system is making scaling your WebSocket application across multiple CPUs and Machines very simple task
-  # - title: Performant 
-  #   details: ClusterWS server utilizes CWS (fork of uWebSockets) c++ Node.js bindings for websocket communication
+  - title: Simple
+    details: ClusterWS is designed to be intuitive and simplify process of building scalable websocket applications
+  - title: Configurable
+    details: Fluent configuration allows easily change between running in single instance, scaling across multiple processes and/or machines
+  - title: SDKs
+    details: ClusterWS official supports client SDKs for Android, iOS and Web
 footer: MIT Licensed | Copyright © 2018 ClusterWS
 ---

@@ -5,12 +5,12 @@ sidebarDepth: 2
 
 ## Installation
 
-Simply run below command to install **ClusterWS** server package in to your Node.js project:
+Run below command to install **ClusterWS** server package in to your Node.js project:
 
 ```js
-// Current version is alpha 3
+// Current version is alpha 7
 
-npm i @clusterws/server@4.0.0-alpha.4
+npm i @clusterws/server@4.0.0-alpha.7
 
 // Below installation will not work correctly 
 // as new version has not been released yet
@@ -194,8 +194,64 @@ new ClusterWS({
 ```
 
 ### scaleOptions (optional)
+* Type: object
 
-TODO: Write docs for scale options
+Parameters:
+* `scaler`: (optional, enum, default `Scaler.Default`, available: `Scaler.Redis`, `Scaler.Default`)
+* `workers`: (optional, number, default 1)
+* `restartOnFail`: (optional, boolean, default false)
+
+* `redis`: (optional, `node_redis` configurations, default `null`)
+* `default`: (optional, object, default TODO: finish writing this part)
+
+By using `scaler` option you can select which module do you want to use to scale your application,
+currently only `redis` and `default` are available, to configure each of them you will need to pass configurations to 
+`redis` and/or `default` (please note only one of then can run at the the time).
+
+**To use redis you will need to install `node_redis` with `npm install node_redis`**
+
+```js
+const { ClusterWS, Scaler } = require('@clusterws/server');
+
+new ClusterWS({
+  worker: ...,
+  scaleOptions: {
+    // Select default scaler will use options from `default` object,
+    // swap it to Scaler.Redis to use redis and options from `redis` object
+    scaler: Scaler.Default,
+
+    // Will run 2 workers
+    workers: 2,
+
+    // Configure connection to redis 
+    // (is not used if scaler is not set to Scaler.Redis)
+    redis: {
+      // more options are available in `node_redis` module 
+      host: 'localhost',
+      port: 6379
+    },
+
+    // Configure default scaler 
+    // (is not used if scaler is not set to Scaler.Default)
+    default: {
+      // will run 1 broker
+      brokers: 1,
+
+      // Manually set ports on which brokers will run 
+      // (if not provided those ports will be set automatically)
+      brokersPorts: [5555]
+      // TODO: write rest of the options
+    }
+  }
+})
+
+
+
+```
+
+
+
+
 
 ## Socket
 Socket section
