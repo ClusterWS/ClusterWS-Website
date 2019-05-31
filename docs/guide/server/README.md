@@ -176,9 +176,11 @@ new ClusterWS({
 });
 
 
-// Example using custom loger
+// Example using custom logger
 const logger = require('pino')()
 const { ClusterWS } = require('@clusterws/server');
+
+// You can configure custom logger around here 
 
 new ClusterWS({
   worker: ...,
@@ -192,10 +194,9 @@ new ClusterWS({
 ### tlsOptions (optional)
 * Type: `SecureContextOptions` (from node.js `tls`) [Node.js doc](https://nodejs.org/api/tls.html#tls_tls_createsecurecontext_options)
 
-
 This options enables `https://` and `wss://` for your server. 
 
-**Note:** better way to setup `https://` and `wss://` would be by setting up proxy server such as Nginx in front of you Node application.
+**Note:** better way to setup `https://` and `wss://` would be by using proxy server such as [Nginx](https://www.nginx.com/) in front of your Node application.
 
 ```js
 const { ClusterWS } = require('@clusterws/server');
@@ -210,19 +211,32 @@ new ClusterWS({
 ```
 
 ### scaleOptions (optional)
-* Type: object
+* Type: `Object`
 
-Parameters:
-* `scaler`: (optional, enum, default `Scaler.Default`, available: `Scaler.Redis`, `Scaler.Default`)
-* `workers`: (optional, number, default 1)
-* `restartOnFail`: (optional, boolean, default false)
+```js
+{
+  scaler: enum Scaler,
+  workers: number,
+  restartOnFail: boolean,
+  redis: node_redis options,
+  default: {
+     brokers: number,
+     brokersPorts: number[],
+     horizontalScaleOptions: {
+        key: string;
+        scalersUrls: string[];
+        masterOptions: {
+            port: number;
+            tlsOptions: SecureContextOptions;
+        };
+     }
+  }
+}
+```
 
-* `redis`: (optional, `node_redis` configurations, default `null`)
-* `default`: (optional, object, default TODO: finish writing this part)
-
-By using `scaler` option you can select which module do you want to use to scale your application,
+By using `scaler` option you can select what do you want to use for scaling your ClusterWS, 
 currently only `redis` and `default` are available, to configure each of them you will need to pass configurations to 
-`redis` and/or `default` (please note only one of then can run at the the time).
+`redis` and/or `default` (please note only one of then can run at the time).
 
 **To use redis you will need to install `node_redis` with `npm install node_redis`**
 
@@ -266,11 +280,60 @@ new ClusterWS({
 ```
 
 
-
-
-
 ## Socket
-Socket section
+
+ClusterWS tries to be consistent with specifications (still needs some improvements in this area) adding on top of it additional functionality.
+
+**Note:** do not change `socket.id` as it is used internally
+```js
+function Worker() {
+  const wss = this.wss;
+
+  wss.on('connection', (socket) => {
+    // return socket ready state based on CWS (still under work)
+    socket.readyState;
+
+    // pong event is called when client send back pong
+    socket.on('pong', () => {})
+    
+    // default error event will be called when socket got an error
+    socket.on('error', (err) => {})
+
+    // default close event will be called when socket has been disconnected
+    socket.on('close', (code, reason) => {})
+
+    // on message will intercept all events including system one 
+    // and will not process to the next step 
+    // (can be used to filter messages or implement own protocol and so on)
+    socket.on('message', (msg) => {
+
+      // to process to next step you have to call processMessage
+      // process message accepts stringified array or just array 
+      // (based on ClusterWS protocol)
+      socket.processMessage(msg);
+    });
+
+    // will listen on specified event you send from the client
+    socket.on('any event name', (message) => {
+      // executed after receiving above specified event
+    });
+
+    // this will transmit message without encoding it in CusterWS protocol
+    // accepts only string or binary
+    socket.send("message string or binary")
+
+    // this will transmit message with full encoding to CusterWS protocol
+    // accepts any types
+    socket.send("any event name", "any type message");
+
+    // default close function
+    socket.close(code, reason);
+
+    // kill connection
+    socket.terminate();
+  });
+}
+```
 
 ## Pub/Sub
 Pub/Sub section
