@@ -286,6 +286,8 @@ ClusterWS tries to be consistent with specifications (still needs some improveme
 
 **Note:** do not change `socket.id` as it is used internally
 ```js
+// <....> 
+
 function Worker() {
   const wss = this.wss;
 
@@ -336,10 +338,83 @@ function Worker() {
 ```
 
 ## Pub/Sub
-Pub/Sub section
+ClusterWS currently provides 2 different pub/sub engine, first is Default (system provided), second is Redis (can be configured in ClusterWS options).
+
+```js
+// <....> 
+
+function Worker() {
+  const wss = this.wss; 
+
+  // Publish specific message to specific channel
+  wss.publish('any channel', 'any message');
+}
+```
 
 ## Middleware
-Middleware section
+ClusterWS provide simple middleware.
+
+```js
+const { Middleware } = require('@clusterws/server');
+
+// <....> 
+
+function Worker() {
+  const wss = this.wss; 
+
+  // Before websocket connections is accepted you can verify user and 
+  // allow or decline this connection
+  wss.addMiddleware(Middleware.verifyConnection, (info, next) => {
+    // info is the same as in ws module
+    
+    // Will accept connection
+    next(true)
+
+    // Will decline connection (wss.on('connection') won't be called)
+    next(false)
+  }); 
+
+  // Catches all subscriptions to the channels
+  // channel is name of the channel to which socket is trying to subscribe
+  wss.addMiddleware(Middleware.onSubscribe, (socket, channel, next) => {
+    // will alow to subscribe to the channel
+    next(true)
+
+    // will decline subscription and inform client with reject response
+    next(false)
+  }); 
+
+  // Catches all unsubscribe events from channel
+  wss.addMiddleware(Middleware.onUnsubscribe, (socket, channel) => { }); 
+
+  // Will be called when new channel is created
+  wss.addMiddleware(Middleware.onChannelOpen, (channel) => { });
+  
+  // Will be called when new channel is closed/removed
+  wss.addMiddleware(Middleware.onChannelClose, (channel) => { }); 
+
+  // Will catch all publish events from the connected 
+  // clients which try to publish something
+  wss.addMiddleware(Middleware.onPublishIn, (channel, message, next) => { 
+    // channel which message is published to 
+    // message actual message
+
+    // you can modify channel and message before passing it to next function
+    next(channel, message)
+
+    // this will not publish message
+    next(false)
+  }); 
+
+
+  // TODO: add below with explanations
+  // wss.addMiddleware(Middleware.onMessageFromWorker, () => { }); 
+  // wss.addMiddleware(Middleware.onPublishOut, () => { }); 
+  // wss.publishToWorkers() 
+
+  wss.on('connection', (socket) => { })
+}
+```
 
 
 

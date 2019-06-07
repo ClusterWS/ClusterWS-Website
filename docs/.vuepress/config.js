@@ -10,7 +10,6 @@ module.exports = {
       { text: 'GitHub', link: 'https://github.com/ClusterWS/ClusterWS' }
     ],
     sidebar: [
-      '/guide/',
       '/guide/server/',
       '/guide/clients/JavaScript.md'
     ]
